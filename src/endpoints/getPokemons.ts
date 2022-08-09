@@ -21,7 +21,7 @@ export default async function getPokemons(req: Request, res: Response) {
       .select("*")
       .from("pokemon_go")
       .where("Name", "LIKE", `%${name}%`)
-      .where("Type_1", "LIKE", `%${type}%`)
+      .orWhere("Type_1", "LIKE", `%${type}%`)
       .orderBy(sort, order)
       .limit(size)
       .offset(offset);

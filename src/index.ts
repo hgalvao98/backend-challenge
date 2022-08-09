@@ -16,7 +16,7 @@ export const connection = knex({
   },
 });
 
-const PORT = 3003;
+const PORT = 3306;
 
 const app = express();
 app.use(express.json());

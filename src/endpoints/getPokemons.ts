@@ -1,6 +1,5 @@
 import { connection } from "./../index";
-import e, { Request, Response } from "express";
-import selectPokemons from "../data/selectPokemons";
+import { Request, Response } from "express";
 
 export default async function getPokemons(req: Request, res: Response) {
   try {
